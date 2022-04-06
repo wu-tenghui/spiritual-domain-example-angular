@@ -1,0 +1,12 @@
+<div id="main-body">
+  <nz-carousel [nzAutoPlay]="true">
+    <div nz-carousel-content *ngFor="let index of array">
+      <div echarts
+           [options]="chartOption"
+           (chartInit)="echartsInit($event)"
+           (chartClick)="echartsClick($event)"
+           style="width: 100%; height: 100%;"
+      ></div>
+    </div>
+  </nz-carousel>
+</div>
